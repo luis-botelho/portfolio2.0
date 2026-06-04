@@ -19,5 +19,11 @@
     --tw-gradient-from: var(--primary);
 
   }
-
+  .to-primary {
+    --tw-gradient-to: var(--primary);
+  }
+  via-primary {
+    --tw-gradient-via: var(--primary);
+  }
 }
+

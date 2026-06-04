@@ -1,13 +1,15 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Header from './components/header'
+
 
 const App = () => {
   useEffect(() => {
     AOS.init({
       duration: 1000, // Animation duration in milliseconds
-      once: true, // Whether animation should happen only once - while scrolling down
+      once: false,
+      offset: 100, 
     });
   }, []);
   return (
