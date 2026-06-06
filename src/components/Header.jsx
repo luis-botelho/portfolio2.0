@@ -36,7 +36,11 @@ function Header() {
             Contact Me
           </button>
         </nav>
+        <button className="md:hidden text-white" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+            {isMenuOpen ? <X size={32} /> : <Menu size={32} />}
+        </button>
       </div>
+      
     </header>
   );
 }
