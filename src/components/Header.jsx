@@ -1,4 +1,5 @@
 import React from "react";
+import { Menu, X } from "lucide-react";
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -25,23 +26,37 @@ function Header() {
           <ul className="flex gap-8">
             {menuItens.map((item) => (
               <li key={item.name}>
-                <button onClick={() => scrollToSection(item.href)}
-                  className="text-gray hover:text-white text-base font-medium transition-colors">
+                <button
+                  onClick={() => scrollToSection(item.href)}
+                  className="text-gray hover:text-white text-base font-medium transition-colors"
+                >
                   {item.name}
                 </button>
               </li>
             ))}
           </ul>
-          <button onClick ={() => scrollToSection("#contact")}  className="bg-primary text-white px-6 py-2.5 rounded-lg text-base font-semibold hover:bg-primary/90 transition-all">
+          <button
+            onClick={() => scrollToSection("#contact")}
+            className="bg-primary text-white px-6 py-2.5 rounded-lg text-base font-semibold hover:bg-primary/90 transition-all"
+          >
             Contact Me
           </button>
         </nav>
-        <button className="md:hidden text-white" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-            {isMenuOpen ? <X size={32} /> : <Menu size={32} />}
+        <button
+          className="md:hidden text-white"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
+          {isMenuOpen ? <X size={32} /> : <Menu size={32} />}
         </button>
       </div>
-      
+      {isMenuOpen && (
+        <div
+          className="fixed inset-0 bg-black/60 backdrop-blur-sm md:hidden"
+          onClick={() => setIsMenuOpen(false)}
+        ></div>
+      )}
     </header>
+   
   );
 }
 

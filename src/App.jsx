@@ -1,7 +1,7 @@
 import React,{useEffect} from 'react'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import Header from './components/header'
+import Header from './components/Header'
 
 
 const App = () => {
@@ -15,6 +15,7 @@ const App = () => {
   return (
     <div className='bg-[#111827] min-h-screen'> 
        <Header />
+       <p>run barry</p>
     </div>
   )
 }
