@@ -55,8 +55,21 @@ function Header() {
           onClick={() => setIsMenuOpen(false)}
         ></div>
       )}
+      <div
+        className={`fixed top-0 right-0 h-full w-80
+  bg-[#111827] z-50 transition-transform duration-300
+  md:hidden ${
+    isMenuOpen ? "translate-x-0" : "translate-x-full"
+  } p-8 flex flex-col`}
+      >
+        <button
+          className="self-end tzxt-white mb-10"
+          onClick={() => setIsMenuOpen(false)}
+        >
+          <X size={32} />
+        </button>
+      </div>
     </header>
-   
   );
 }
 

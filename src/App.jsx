@@ -15,7 +15,7 @@ const App = () => {
   return (
     <div className='bg-[#111827] min-h-screen'> 
        <Header />
-       <p>run barry</p>
+      
     </div>
   )
 }
